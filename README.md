@@ -1,3 +1,7 @@
+## Content
+
+* `post.title`
+* `post.absolute_url`
 
 ## Date / Time
 
