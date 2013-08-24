@@ -121,3 +121,11 @@ This only works when you `enable_comment` & having `disqus_shortname`
 </section>
 {% endblock %}
 ```
+
+## Paginate
+
+TODO 
+
+## Tag
+
+TODO
