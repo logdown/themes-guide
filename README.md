@@ -1,10 +1,46 @@
 ## Pages
 
-*  `{% block index_page %}`
-*  `{% block show_page %}`
-*  `{% block tags_page %}`
-*  `{% block search_page %}`
-*  `{% block archives_page %}`
+### Index Page
+
+```
+{% block index_page %}
+    YOUR CONTENT HERE
+{% endblock %}
+```
+
+### Show Page
+
+```
+`{% block show_page %}`
+    YOUR CONTENT HERE
+{% endblock %}
+```
+
+### Tags Page
+
+```
+{% block tags_page %}
+    YOUR CONTENT HERE
+{% endblock %}
+```
+
+### Search Page
+
+```
+{% block search_page %}
+
+    YOUR CONTENT HERE
+{% endblock %}
+```
+
+###  Archives Page
+
+```
+{% block archives_page %}
+    YOUR CONTENT HERE
+{% endblock %}
+```
+
 
 ## Post
 
