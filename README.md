@@ -143,6 +143,8 @@ TODO
 
 ## Blog
 
+<http://logdown.com/account/settings>
+
 * `{{blog.author_about_me_link}}`
 * `{{blog.author_github_profile_link}}`
 * `{{blog.author_facebook_profile_link}}`
