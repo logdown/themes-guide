@@ -1,4 +1,12 @@
-# Post
+## Pages
+
+*  `{% block index_page %}`
+*  `{% block show_page %}`
+*  `{% block tags_page %}`
+*  `{% block search_page %}`
+*  `{% block archives_page %}`
+
+## Post
 
 ### Title / URL
 
