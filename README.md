@@ -49,6 +49,11 @@
 * `{{post.title}}`
 * `{{post.absolute_url}}`
 
+### Authour Name
+
+* `{{post.author_name}}`
+* `{{post.author_account_name}}`
+
 ### Content
 
 * `{{post.content}}`
