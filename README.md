@@ -11,7 +11,7 @@
 ### Show Page
 
 ```
-`{% block show_page %}`
+{% block show_page %}
     YOUR CONTENT HERE
 {% endblock %}
 ```
