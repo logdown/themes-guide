@@ -109,4 +109,15 @@
 
 ```
 
+## Comment
 
+This only works when you `enable_comment` & having `disqus_shortname`
+
+```
+{% block disqus %}
+<section id="comment">
+  <h2 class="title">Comments</h2>
+  {% disqus %}
+</section>
+{% endblock %}
+```
