@@ -49,7 +49,7 @@
 * `{{post.title}}`
 * `{{post.absolute_url}}`
 
-### Authour Name
+### Authour Info
 
 * `{{post.author_name}}`
 * `{{post.author_account_name}}`
@@ -114,7 +114,7 @@
 
 ```
 
-## Comment
+###  Comment
 
 This only works when you `enable_comment` & having `disqus_shortname`
 
@@ -127,10 +127,23 @@ This only works when you `enable_comment` & having `disqus_shortname`
 {% endblock %}
 ```
 
-## Paginate
+### Paginate
 
-TODO 
+```
+ {{ paginate }} 
 
-## Tag
+```
+
+example css: <http://logdown.com/stylesheets/default_pagination.css>
+
+### Tag
 
 TODO
+
+
+## Blog
+
+* `{{blog.author_about_me_link}}`
+* `{{blog.author_github_profile_link}}`
+* `{{blog.author_facebook_profile_link}}`
+* `{{blog.author_google_plus_link}}`
