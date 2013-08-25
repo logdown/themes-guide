@@ -1,3 +1,13 @@
+## Example Template
+
+* <https://github.com/logdown/themes/blob/gh-pages/its-compiling/index.liquid>
+* <https://github.com/logdown/themes/blob/gh-pages/fabric/index.liquid>
+* <https://github.com/logdown/themes/blob/gh-pages/greyshade/index.liquid>
+
+<hr>
+
+# API
+
 ## Pages
 
 ### Index Page
@@ -145,7 +155,11 @@ TODO
 
 <http://logdown.com/account/settings>
 
+* `{{blog.author_about_me}}`
+* `{{blog.author_gravatar_hash}}`
+* `{{blog.author_display_name}}`
 * `{{blog.author_about_me_link}}`
 * `{{blog.author_github_profile_link}}`
 * `{{blog.author_facebook_profile_link}}`
 * `{{blog.author_google_plus_link}}`
+* `{{blog.author_twitter_link}}`
