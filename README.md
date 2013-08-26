@@ -12,7 +12,7 @@
 
 ### Index Page
 
-```
+```html
 {% block index_page %}
     YOUR CONTENT HERE
 {% endblock %}
@@ -20,7 +20,7 @@
 
 ### Show Page
 
-```
+```html
 {% block show_page %}
     YOUR CONTENT HERE
 {% endblock %}
@@ -36,7 +36,7 @@
 
 ### Search Page
 
-```
+```html
 {% block search_page %}
 
     YOUR CONTENT HERE
@@ -45,7 +45,7 @@
 
 ###  Archives Page
 
-```
+```html
 {% block archives_page %}
     YOUR CONTENT HERE
 {% endblock %}
@@ -70,7 +70,7 @@
 
 ### Content in Search Page
 
-```
+```html
 {% block search_page %}
   {{ post.content | search_content: query_string }}
 {% endblock %}
@@ -79,7 +79,7 @@
 
 ### Excerpt Content & Read More
 
-```
+```html
 {% block index_page|tags_page %}
    {{ post.excerpt_content }}
      {% block readmore %}
@@ -98,7 +98,7 @@
 
 ### Facebook Share
 
-```
+```html
 {% block facebook_sharing %}
     YOUR CONTENT HERE
 {% endblock %}
@@ -107,7 +107,7 @@
 
 ### Twitter Sharing
 
-```
+```html
 {% block twitter_sharing %}
     YOUR CONTENT HERE
 {% endblock %}
@@ -117,7 +117,7 @@
 ### Google Plus Sharing
 
 
-```
+```html
 {% block google_plus_sharing %}
     YOUR CONTENT HERE
 {% endblock %}
@@ -128,7 +128,7 @@
 
 This only works when you `enable_comment` & having `disqus_shortname`
 
-```
+```html
 {% block disqus %}
 <section id="comment">
   <h2 class="title">Comments</h2>
@@ -137,11 +137,48 @@ This only works when you `enable_comment` & having `disqus_shortname`
 {% endblock %}
 ```
 
-### Paginate
+### Pagination
 
-```
- {{ paginate }} 
+```html
+  {% block pagination %}
+  <div class="pagination pagination-centered">
+    <ul>
+      {% block previous_page %}
+        <li class="prev previous_page ">
+          <a href="{{previous_page_url}}">Previous</a>
+        </li>
+      {% endblock %}
 
+      {% block jump_pagination %}
+
+        {% block current_page %}
+          <li class="active">
+            <a href="#">{{page_number}}</a>
+          </li>
+        {% endblock %}
+
+        {% block page_gap %}
+          <li class="disabled">
+            <a href="#"><span class="gap">…</span></a>
+          </li>
+        {% endblock %}
+
+        {% block jump_page %}
+          <li>
+            <a href="{{page_url}}">{{page_number}}</a>
+          </li>
+        {% endblock %}
+
+      {% endblock %}
+
+      {% block next_page %}
+        <li class="next next_page ">
+          <a href="{{next_page_url}}">Next</a>
+        </li>
+      {% endblock %}
+    </ul>
+  </div>
+  {% endblock %}
 ```
 
 example css: <http://logdown.com/stylesheets/default_pagination.css>
