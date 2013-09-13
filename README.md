@@ -183,9 +183,30 @@ This only works when you `enable_comment` & having `disqus_shortname`
 
 example css: <http://logdown.com/stylesheets/default_pagination.css>
 
+### Recent posts
+
+```
+{% block recent_posts %}
+  <section class="first odd">
+    <h1>Recent Posts</h1>
+    <ul id="recent_posts">
+      {% block posts %}
+      <li class="post">
+        <a href="{{ post.absolute_url }}">{{post.title}}</a>
+      </li>
+      {% endblock %}
+    </ul>
+  </section>
+{% endblock %}
+```
+
+
 ### Tag
 
 TODO
+
+
+
 
 
 ## Blog
