@@ -203,8 +203,15 @@ example css: <http://logdown.com/stylesheets/default_pagination.css>
 
 ### Tag
 
-TODO
-
+```
+{% block tag_list %}
+<span class="tags">
+  {% block tags %}
+    <a class='category' href='{{tag.url}}'>{{tag.name}}</a>{% block next_tag %},{% endblock %}
+  {% endblock %}
+</span>
+{% endblock %}
+```
 
 
 
