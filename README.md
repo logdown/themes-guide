@@ -70,7 +70,7 @@ The posts wrapper block defines where a single blog post should be rendered in. 
 | `{{post.author_name}}`          | Render the display name of a blog post's author.                                   |
 | `{{post.disqus_comments_link}}` | The URL to comments part of a post. (Only if you have disqus setup for your blog.) |
 
-### Publish time format options
+#### Publish time format options
 
 Usage: `{{post.published_at.(format_option)}}`
 
@@ -84,7 +84,7 @@ Usage: `{{post.published_at.(format_option)}}`
 | `time_ago`     | Render the relative distance of time from now. (ex. “2 days ago”) |
 | `date`         | Formated as date-only. (ex. “April 7, 2013”)                      |
 
-### Highlighted post content in search results page
+#### Highlighted post content in search results page
 
 ```html
 {% block search_page %}
@@ -93,7 +93,7 @@ Usage: `{{post.published_at.(format_option)}}`
 
 ```
 
-### Excerpt post content & Read More link
+#### Excerpt post content & Read More link
 
 ```html
 {% block index_page|tags_page %}
