@@ -8,9 +8,13 @@
 
 # API
 
-## Pages
+## Pages Blocks
 
-### Index Page
+These blocks will render wrapped content on specified pages.
+
+### Syntax
+
+Render on only one type of page:
 
 ```html
 {% block index_page %}
@@ -18,38 +22,25 @@
 {% endblock %}
 ```
 
-### Show Page
+Render on multiple types of page:
 
 ```html
-{% block show_page %}
+{% block index_page|show_page %}
     YOUR CONTENT HERE
 {% endblock %}
 ```
 
-### Tags Page
+### Available Blocks
 
-```
-{% block tags_page %}
-    YOUR CONTENT HERE
-{% endblock %}
-```
-
-### Search Page
-
-```html
-{% block search_page %}
-
-    YOUR CONTENT HERE
-{% endblock %}
-```
-
-###  Archives Page
-
-```html
-{% block archives_page %}
-    YOUR CONTENT HERE
-{% endblock %}
-```
+| Block Name      | Description                         |
+| --------------- | ----------------------------------- |
+| `index_page`    | Render on blog homepage.            |
+| `show_page`     | Render on blog post page.           |
+| `archives_page` | Render on blog archives page.       |
+| `search_page`   | Render on search result page.       |
+| `tags_page`     | Render on post lists of a tag.      |
+| `category_page` | Render on post lists of a category. |
+| `static_page`   | Render on every static pages.       |
 
 
 ## Post
