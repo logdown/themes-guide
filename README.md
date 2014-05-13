@@ -45,21 +45,46 @@ Render on multiple types of page:
 
 ## Post
 
-### Title / URL
+There are many variables to print out content or information of a posts. But those variables need to be put *inside* a posts “wrapper block.”
 
-* `{{post.title}}`
-* `{{post.absolute_url}}`
+The posts wrapper block defines where a single blog post should be rendered in. The block will repeat itself if the page has more than one post (and it usually does). On a show page, the block will only be rendered once.
 
-### Authour Info
+### Posts wrapper block
 
-* `{{post.author_name}}`
-* `{{post.author_account_name}}`
+```html
+{% block posts %}
+  <article class="post">
+    POST CONTENT HERE
+  </article>
+{% endblock %}
+```
 
-### Content
+### Simple post variables
 
-* `{{post.content}}`
+| Variable Name                   | Description                                                                        |
+| ------------------------------- | ---------------------------------------------------------------------------------- |
+| `{{post.title}}`                | Render the title of a blog post.                                                   |
+| `{{post.absolute_url}}`         | Render the absolute URL of a blog post.                                            | 
+| `{{post.content}}`              | Render the blog post content.                                                      |
+| `{{post.published_at}}`         | Render post publish time. The time can be further formated (see below.)            |
+| `{{post.author_name}}`          | Render the display name of a blog post's author.                                   |
+| `{{post.disqus_comments_link}}` | The URL to comments part of a post. (Only if you have disqus setup for your blog.) |
 
-### Content in Search Page
+### Publish time format options
+
+Usage: `{{post.published_at.(format_option)}}`
+
+| Format Option  | Description                                                       |
+| -------------- | ----------------------------------------------------------------- |
+| `short_month`  | Abbreviated month. (ex. “Jan”)                                    |
+| `day_of_month` | Day of the month with zero padded. (01–30)                        |
+| `full_year`    | 4-digit year. (ex. 2014)                                          |
+| `timestamp`    | The time as a number of seconds since the Epoch.                  |
+| `utc`          | Time in UTC format. (ex. “2007-11-19 14:18:51 UTC”)               |
+| `time_ago`     | Render the relative distance of time from now. (ex. “2 days ago”) |
+| `date`         | Formated as date-only. (ex. “April 7, 2013”)                      |
+
+### Highlighted post content in search results page
 
 ```html
 {% block search_page %}
@@ -68,7 +93,7 @@ Render on multiple types of page:
 
 ```
 
-### Excerpt Content & Read More
+### Excerpt post content & Read More link
 
 ```html
 {% block index_page|tags_page %}
@@ -79,10 +104,6 @@ Render on multiple types of page:
 {% endblock %}
 ```
 
-### Date / Time
-
-* `{{post.published_at.utc}}` : 2013-04-07 07:59:00 UTC
-* `{{post.published_at.date}}` : April  7, 2013
 
 
 ## Social Sharing
