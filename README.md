@@ -119,6 +119,24 @@ The `{% block disqus %}` is the conditional block which renders its content if t
 {% endblock %}
 ```
 
+### Traversing through previous/next post
+
+These block can give your reader quick access to previous or next post.
+
+```html
+{% block previous_post %}
+  <a class="prev" href="{{previous_post_url}}">
+    &larr; {{previous_post_title}}
+  </a>
+{% endblock %}
+
+{% block next_post %}
+  <a class="next" href="{{next_post_url}}">
+    {{next_post_title}} &rarr;
+  </a>
+{% endblock %}
+```
+
 ## Social Sharing Conditional Blocks
 
 These blocks will only render its wrapped content if you enable social sharing options in your blog settings. You still have to provide the social plugin markup in the conditional blocks (so you can choose to add a Facebook Like Button or Share Button, for instance.) But Logdown will load the official scripts from Facebook, Twitter and Google Plus for you.
