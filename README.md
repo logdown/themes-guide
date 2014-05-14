@@ -165,9 +165,57 @@ These blocks will only render its wrapped content if you enable social sharing o
 {% endblock %}
 ```
 
+## Blog Index Pagination
 
+```html
+{% block pagination %}
+  CONTENT INSIDE BLOCK
+{% endblock %}
+```
 
-### Pagination
+This block will render on your blog index if pagination is needed. You can set how many posts you want to show per page in your blog settings.
+
+### Pagination Component Blocks
+
+All pagination component blocks should be put within the `{% block pagination %}` wrapper block.
+
+```html
+{% block (block_name) %}
+  CONTENT INSIDE BLOCK
+{% endblock %}
+```
+
+| Block Name        | Description                                      |
+| ----------------- | ------------------------------------------------ |
+| `previous_page`   | Render if a “prev” page navigation is available. |
+| `next_page`       | Render if a “next” page navigation is available. |
+| `jump_pagination` | Render the page jump links.                      |
+
+And Variables:
+
+| Variable Name           | Description                                                                              |
+| ----------------------- | ---------------------------------------------------------------------------------------- |
+| `{{previous_page_url}}` | URL to previous pagination page. Should be put inside `{% block previous_page %}` block. |
+| `{{next_page_url}}`     | URL to next pagination page. Should be put inside `{% block next_page %}` block.         |
+
+### Page Jump Components
+
+These components should be put in the `{% block jump_pagination %}` block to build the page jump markups.
+
+| Block Name     | Description                                               |
+| -------------- | --------------------------------------------------------- |
+| `current_page` | Wrap markups to show number of current page.              |
+| `page_gap`     | Wrap markups to show the pagination gap (usually “...”).  |
+| `jump_page`    | Wrap markups to show the page jump link with page number. |
+
+And Variables:
+
+| Variable Name     | Description                                                                              |
+| ----------------- | ---------------------------------------------------------------------------------------- |
+| `{{page_number}}` | Number of the pagination page where the page jump links to. Should be put inside `{% block current_page %}` or `{% block jump_page %}` block.
+| `{{page_url}}`    | URL to the pagination page where the page jump links to. Should be put inside `{% block jump_page %}` block.
+
+### Complete example for a pagination block
 
 ```html
   {% block pagination %}
@@ -211,7 +259,7 @@ These blocks will only render its wrapped content if you enable social sharing o
   {% endblock %}
 ```
 
-example css: <http://logdown.com/stylesheets/default_pagination.css>
+Stylesheet for the example pagination block above: <http://logdown.com/stylesheets/default_pagination.css>
 
 ### Recent posts
 
