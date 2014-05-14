@@ -12,27 +12,23 @@
 
 These variables will print infos of your blog. Some of them can be changed in your blog settings.
 
-| Variable Name      | Description                         |
-| --------------- | ----------------------------------- |
-| `{{blog.absolute_url}}` | Absolute URL to your blog. |
-| `{{blog.title}}` | Title of your blog. |
-| `{{blog.tagline}}` | Tagline of your blog. |
-| `{{blog.description}}` | Description of your blog. |
-
-| `{{blog.rss_url}}` | URL of RSS Feed for your blog. |
-| `{{blog.search_posts_url}}` | Name of the blog's creator. |
-| `{{blog.user_name}}` | Name of the blog's creator. |
-| `{{blog.user_name}}` | Name of the blog's creator. |
-
-
-| `{{blog.author_about_me}}` |
-| `{{blog.author_gravatar_hash}}` |
-| `{{blog.author_display_name}}` |
-| `{{blog.author_about_me_link}}` |
-| `{{blog.author_github_profile_link}}` |
-| `{{blog.author_facebook_profile_link}}` |
-| `{{blog.author_google_plus_link}}` |
-| `{{blog.author_twitter_link}}` |
+| Variable Name                           | Description                                                            |
+| --------------------------------------- | ---------------------------------------------------------------------- |
+| `{{blog.absolute_url}}`                 | Absolute URL to your blog.                                             |
+| `{{blog.title}}`                        | Title of your blog.                                                    |
+| `{{blog.tagline}}`                      | Tagline of your blog.                                                  |
+| `{{blog.description}}`                  | Description of your blog.                                              |
+| `{{blog.rss_url}}`                      | URL of RSS Feed for your blog.                                         |
+| `{{blog.search_posts_url}}`             | The Search action URL for your blog. Can be used for blog search form. |
+| `{{blog.archives_url}}`                 | URL to your blog archives page.                                        |
+| `{{blog.author_about_me}}`              | The “About Me” text of the blog's creator.                             |
+| `{{blog.author_gravatar_hash}}`         | The gravatar hash for the blog's creator.                              |
+| `{{blog.author_display_name}}`          | The display name of the blog's creator.                                |
+| `{{blog.author_about_me_link}}`         | URL to the about.me profile of the blog's creator.                     |
+| `{{blog.author_github_profile_link}}`   | URL to the github profile of the blog's creator.                       |
+| `{{blog.author_facebook_profile_link}}` | URL to the Facebook profile of the blog's creator.                     |
+| `{{blog.author_google_plus_link}}`      | URL to the Google Plus profile of the blog's creator.                  |
+| `{{blog.author_twitter_link}}`          | URL to the Twitter profile of the blog's creator.                      |
 
 
 ## Pages Blocks
