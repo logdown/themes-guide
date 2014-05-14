@@ -106,9 +106,9 @@ Usage: `{{post.published_at.(format_option)}}`
 
 
 
-## Social Sharing Condition Blocks
+## Social Sharing Conditional Blocks
 
-These blocks will only render its wrapped content if you enable social sharing options in your blog settings. You still have to provide the social plugin markup in the condition blocks (so you can choose to add a Facebook Like Button or Share Button, for instance.) But Logdown will load the official scripts from Facebook, Twitter and Google Plus for you.
+These blocks will only render its wrapped content if you enable social sharing options in your blog settings. You still have to provide the social plugin markup in the conditional blocks (so you can choose to add a Facebook Like Button or Share Button, for instance.) But Logdown will load the official scripts from Facebook, Twitter and Google Plus for you.
 
 ### Facebook Social Plugins
 
