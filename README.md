@@ -106,34 +106,32 @@ Usage: `{{post.published_at.(format_option)}}`
 
 
 
-## Social Sharing
+## Social Sharing Condition Blocks
 
-### Facebook Share
+These blocks will only render its wrapped content if you enable social sharing options in your blog settings. You still have to provide the social plugin markup in the condition blocks (so you can choose to add a Facebook Like Button or Share Button, for instance.) But Logdown will load the official scripts from Facebook, Twitter and Google Plus for you.
+
+### Facebook Social Plugins
 
 ```html
 {% block facebook_sharing %}
-    YOUR CONTENT HERE
+  <div class="fb-like" data-href="{{post.absolute_url}}" data-layout="button_count" data-send="false" data-show-faces="false" data-width="90"></div>
 {% endblock %}
-
 ```
 
-### Twitter Sharing
+### Twitter Buttons
 
 ```html
 {% block twitter_sharing %}
-    YOUR CONTENT HERE
+  <a href="https://twitter.com/share?" class="twitter-share-button">Tweet</a>
 {% endblock %}
-
 ```
 
-### Google Plus Sharing
-
+### Google Plus +1 Button
 
 ```html
 {% block google_plus_sharing %}
-    YOUR CONTENT HERE
+  <div class="g-plusone" data-size="medium"></div>
 {% endblock %}
-
 ```
 
 ###  Comment
