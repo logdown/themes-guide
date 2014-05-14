@@ -8,6 +8,13 @@
 
 # Logdown Themes API
 
+1. [Blog Variables](#blog-variables)
+2. [Pages Blocks](#pages-blocks)
+3. [Post](#post)
+4. [Social Sharing Blocks](#social-sharing-blocks)
+5. [Blog Index Pagination](#blog-index-pagination)
+6. [Recent Posts List](#recent-posts-list)
+
 ## Blog Variables
 
 These variables will print infos of your blog. Some of them can be changed in your blog settings.
@@ -172,7 +179,7 @@ These block can give your reader quick access to previous or next post.
 {% endblock %}
 ```
 
-## Social Sharing Conditional Blocks
+## Social Sharing Blocks
 
 These blocks will only render its wrapped content if you enable social sharing options in your blog settings. You still have to provide the social plugin markup in the conditional blocks (so you can choose to add a Facebook Like Button or Share Button, for instance.) But Logdown will load the official scripts from Facebook, Twitter and Google Plus for you.
 
