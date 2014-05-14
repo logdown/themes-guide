@@ -104,7 +104,20 @@ Usage: `{{post.published_at.(format_option)}}`
 {% endblock %}
 ```
 
+###  Disqus Comment Block
 
+This block will render the disqus comment block for you, only if you have set the disqus shortname in your blog settings. If a blog post is explicitly comment-disabled through the octopress markdown header, this block will not render on the post page.
+
+The `{% block disqus %}` is the conditional block which renders its content if the page can show a comment block. And the `{% disqus %}` will be replaced with markup needed for disqus.
+
+```html
+{% block disqus %}
+<section id="comment">
+  <h2 class="title">Comments</h2>
+  {% disqus %}
+</section>
+{% endblock %}
+```
 
 ## Social Sharing Conditional Blocks
 
@@ -134,18 +147,7 @@ These blocks will only render its wrapped content if you enable social sharing o
 {% endblock %}
 ```
 
-###  Comment
 
-This only works when you `enable_comment` & having `disqus_shortname`
-
-```html
-{% block disqus %}
-<section id="comment">
-  <h2 class="title">Comments</h2>
-  {% disqus %}
-</section>
-{% endblock %}
-```
 
 ### Pagination
 
