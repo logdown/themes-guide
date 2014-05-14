@@ -6,7 +6,34 @@
 
 <hr>
 
-# API
+# Logdown Themes API
+
+## Blog Variables
+
+These variables will print infos of your blog. Some of them can be changed in your blog settings.
+
+| Variable Name      | Description                         |
+| --------------- | ----------------------------------- |
+| `{{blog.absolute_url}}` | Absolute URL to your blog. |
+| `{{blog.title}}` | Title of your blog. |
+| `{{blog.tagline}}` | Tagline of your blog. |
+| `{{blog.description}}` | Description of your blog. |
+
+| `{{blog.rss_url}}` | URL of RSS Feed for your blog. |
+| `{{blog.search_posts_url}}` | Name of the blog's creator. |
+| `{{blog.user_name}}` | Name of the blog's creator. |
+| `{{blog.user_name}}` | Name of the blog's creator. |
+
+
+| `{{blog.author_about_me}}` |
+| `{{blog.author_gravatar_hash}}` |
+| `{{blog.author_display_name}}` |
+| `{{blog.author_about_me_link}}` |
+| `{{blog.author_github_profile_link}}` |
+| `{{blog.author_facebook_profile_link}}` |
+| `{{blog.author_google_plus_link}}` |
+| `{{blog.author_twitter_link}}` |
+
 
 ## Pages Blocks
 
@@ -101,6 +128,18 @@ Usage: `{{post.published_at.(format_option)}}`
      {% block readmore %}
       <a href="{{post.absolute_url}}" class="more">Read on →</a>
      {% endblock %}
+{% endblock %}
+```
+
+### Post Tags List
+
+```
+{% block tag_list %}
+<span class="tags">
+  {% block tags %}
+    <a class='category' href='{{tag.url}}'>{{tag.name}}</a>
+  {% endblock %}
+</span>
 {% endblock %}
 ```
 
@@ -261,7 +300,7 @@ And Variables:
 
 Stylesheet for the example pagination block above: <http://logdown.com/stylesheets/default_pagination.css>
 
-### Recent posts
+## Recent Posts List
 
 ```
 {% block recent_posts %}
@@ -277,32 +316,3 @@ Stylesheet for the example pagination block above: <http://logdown.com/styleshee
   </section>
 {% endblock %}
 ```
-
-
-### Tag
-
-```
-{% block tag_list %}
-<span class="tags">
-  {% block tags %}
-    <a class='category' href='{{tag.url}}'>{{tag.name}}</a>
-  {% endblock %}
-</span>
-{% endblock %}
-```
-
-
-
-
-## Blog
-
-<http://logdown.com/account/settings>
-
-* `{{blog.author_about_me}}`
-* `{{blog.author_gravatar_hash}}`
-* `{{blog.author_display_name}}`
-* `{{blog.author_about_me_link}}`
-* `{{blog.author_github_profile_link}}`
-* `{{blog.author_facebook_profile_link}}`
-* `{{blog.author_google_plus_link}}`
-* `{{blog.author_twitter_link}}`
